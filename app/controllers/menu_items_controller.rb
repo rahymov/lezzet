@@ -3,7 +3,6 @@ class MenuItemsController < ApplicationController
 
   def index
     @menu_items = MenuItem.all
-    @categories = Category.all
   end
 
   def show

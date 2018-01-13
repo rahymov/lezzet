@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
+  resources :categories
   resources :menu_items
+  
   controller :pages do
 	  get '/home', to: "pages#home"
 	  get '/about', to: "pages#about"
