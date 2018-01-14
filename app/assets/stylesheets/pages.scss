@@ -1,3 +1,36 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.about{
+	background-color: #6f6363;
+	
+	img
+	{
+		width: 100%;
+		height: auto;
+		padding: 30px;
+		background-position: 100% 100% ;
+		margin: 0 auto;
+		background-size: cover;
+	}
+	h1
+	{
+		position: absolute; 
+   top: 200px; 
+   left: 0; 
+   width: 100%;
+   color: white;
+   font-weight: bold;
+	}
+	h3
+	{
+		position: absolute; 
+   top: 250px; 
+   left: 0; 
+   width: 100%;
+   font-weight: bold;
+   color: white;
+	}
+}
