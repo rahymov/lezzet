@@ -1,33 +1,13 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Menu Items</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th>Category</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @menu_items.each do |menu_item| %>
-      <tr>
-        <td><%= menu_item.name %></td>
-        <td><%= menu_item.description %></td>
-        <td><%= menu_item.price %></td>
-        <td><%= menu_item.category_id %></td>
-        <td><%= link_to 'Show', menu_item %></td>
-        <td><%= link_to 'Edit', edit_menu_item_path(menu_item) %></td>
-        <td><%= link_to 'Destroy', menu_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<% @menu_items.each_slice(3) do |menu_item| %>
+  <div class="container">
+    <% menu_item.each do |menu_items| %>
+      <div class="col-md-4">
+        <div class="menu_item">
+          <h3><%= menu_items.name %></h3>
+          <h5><%= menu_items.description %></h5>
+          <p><%= number_to_currency(menu_items.price) %></p>
+        </div>
+      </div>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Menu Item', new_menu_item_path %>
+  </div>
+<% end %>

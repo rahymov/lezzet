@@ -16,3 +16,11 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import 'slick';
+@import 'slick-theme';
+.full-screen
+{
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}

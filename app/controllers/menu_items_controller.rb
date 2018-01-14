@@ -2,7 +2,11 @@ class MenuItemsController < ApplicationController
   before_action :set_menu_item, only: [:show, :edit, :update, :destroy]
 
   def index
-    @menu_items = MenuItem.all
+    #@menu_items = MenuItem.all
+    #@category_id = Category.find_by(name: params[:category])
+    #@menu_items = MenuItem.where(category_id: @category_id) 
+    @category = Category.find(params[:category_id])
+    @menu_items = @category.menu_items
   end
 
   def show

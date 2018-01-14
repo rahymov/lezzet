@@ -19,6 +19,7 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'friendly_id', '~> 5.2', '>= 5.2.3'
 gem 'animate-rails', '~> 1.0', '>= 1.0.10'
+gem 'jquery-slick-rails', '~> 1.8', '>= 1.8.1'
 
 
 group :development, :test do

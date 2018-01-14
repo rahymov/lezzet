@@ -1,3 +1,13 @@
-<% Category.all.each do |category| %>
-	<h1><%= link_to category.name, @menu_item %></h1>
+<% @categories.each_slice(4) do |category| %><div class="container">
+	<div class="container">
+		<% category.each do |cat| %>
+			<div class="col-md-3">
+				<div id="category">
+					<h1 class="animated flipInX"><%= link_to cat.name, category_menu_items_path(category) %></h1>
+				</div>
+			</div>
+		<% end %>
+		</div>
+	</div>
 <% end %>
+	
